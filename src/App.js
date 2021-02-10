@@ -15,6 +15,7 @@ const App =  () => {
                 tag={paintings[0].author.tag}
                 authorURL={paintings[0].author.url}
                 author={paintings[0].author.tag}
+                quantity={paintings[0].quantity}
             />
              <Painting
                 url={paintings[1].url}
@@ -23,6 +24,7 @@ const App =  () => {
                 tag={paintings[1].author.tag}
                 authorURL={paintings[1].author.url}
                 author={paintings[1].author.tag}
+                quantity={paintings[1].quantity}
           />
      </div>
   )

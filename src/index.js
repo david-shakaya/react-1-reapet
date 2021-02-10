@@ -32,3 +32,6 @@ const jsxLink = <a className="link"
    target='_blank'">Ссылка на гугл с помощью JSX</a>
 
   //  ReactDOM.render(jsxLink, document.querySelector('#root'))
+
+
+  // При работе с реакт нужно установить npm install --save-dev prop-types
