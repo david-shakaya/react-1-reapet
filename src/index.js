@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import App from './App'
 
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+// Рендерим то что в апп
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 /* Создаем елемент виртуального дома */
@@ -19,7 +20,7 @@ console.log(link);
 
 const root = document.querySelector('#root');
 // Добавляем ел в настоящий дом
-ReactDOM.render(link, root)
+// ReactDOM.render(link, root)
 
 
 /* 
@@ -30,4 +31,4 @@ const jsxLink = <a className="link"
   href="'https://www.google.com/'
    target='_blank'">Ссылка на гугл с помощью JSX</a>
 
-   ReactDOM.render(jsxLink, document.querySelector('#root'))
+  //  ReactDOM.render(jsxLink, document.querySelector('#root'))
