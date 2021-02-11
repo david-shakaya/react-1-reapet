@@ -3,10 +3,9 @@ import  propTypes from 'prop-types'
 
 
 const Painting = (props) => {
-    return (
-        <div>
+        return(<div>
             <img src={props.url}
-                alt={props.title}
+                // alt={props.title}
                 width="300px" />
             <p>{props.title}</p>
             <p>Автор: <a href={ props.authorURL} > { props.tag}</a>
@@ -14,8 +13,7 @@ const Painting = (props) => {
             <p>Цена: {props.price} грн.</p>
             <p>Доступность {props.quantity > 10 ? 'Есть в наличии' : 'Заканчивается' }</p>
             <button>Добавить в корзину</button>
-        </div>
-    )
+        </div>)
 }
 
 // Дефолтное значение если картинка не найдена
@@ -31,7 +29,7 @@ Painting.propTypes = {
     authorURL: propTypes.string.isRequired,
     tag: propTypes.string.isRequired,
     price: propTypes.number.isRequired,
-    quantity:propTypes.number.isRequired
+    quantity:propTypes.number.isRequired,
     
 }
 
