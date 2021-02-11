@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 const Panel = ({title, children}) => 
     <div>
@@ -6,6 +7,12 @@ const Panel = ({title, children}) =>
         {children}
 </div>
 
- 
+
+// ДЛя детей используем тип NODE необязательный
+ Panel.propTypes = {
+     title: propTypes.string,
+     children: propTypes.node,
+    
+}
 
 export default Panel

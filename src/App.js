@@ -12,7 +12,7 @@ import Panel from './components/Panel'
  */
 const App =  () => {
   return (
-      <div>
+      <div> 
       <Logo text={'Логотип'} />
 
       <Panel title={'Title Панели 1'}>
@@ -27,7 +27,7 @@ const App =  () => {
 
             <Panel title={'Title Панели 3'}>
         <p>Ребенок Панел 3</p>
-        <a href="#"></a>
+        <a href="#">Ccылка панели 3</a>
       </Panel>
 
         <PaintingsList item={paintings }/>
