@@ -1,6 +1,7 @@
 import React from 'react';
-import Painting from './Painting';
+import Painting from '../Painting/Painting';
 import propTypes from 'prop-types';
+import './PaintingList.css';
 
 // ПРимер инлайн стилей
 
@@ -21,7 +22,7 @@ const PaintingsList = ({ item }) => {
       }}
     >
       {item.map(painting => (
-        <li key={painting.id}>
+        <li className="Painting-list-item" key={painting.id}>
           <Painting
             url={painting.url}
             title={painting.title}

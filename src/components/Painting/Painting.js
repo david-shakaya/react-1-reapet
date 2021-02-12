@@ -1,21 +1,22 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './Painting.css'
 
 const Painting = props => {
   return (
-    <div>
+    <>
       <img src={props.url} alt={props.title} width="300px" />
       <p>{props.title}</p>
       <p>
         Автор: <a href={props.authorURL}> {props.tag}</a>
       </p>
 
-      <p>Цена: {props.price} грн.</p>
+      <p className="Painting-list-item-price">Цена: {props.price} грн.</p>
       <p>
         Доступность {props.quantity > 10 ? 'Есть в наличии' : 'Заканчивается'}
       </p>
       <button>Добавить в корзину</button>
-    </div>
+    </>
   );
 };
 
@@ -33,6 +34,11 @@ Painting.propTypes = {
   tag: propTypes.string.isRequired,
   price: propTypes.number.isRequired,
   quantity: propTypes.number.isRequired,
+  item: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default Painting;

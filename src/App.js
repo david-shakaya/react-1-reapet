@@ -1,9 +1,9 @@
 import React from 'react';
 import paintings from './paintings.json';
-import PaintingsList from './components/PaintingsList';
+import PaintingsList from './components/PaintingList/PaintingsList';
 import Logo from './components/Logo';
 import Panel from './components/Panel';
-import ColorPiecer from './components/ColorPiecer';
+import ColorPiecer from './components/ColorPicer/ColorPiecer';
 // Рендер c помощю мап.
 
 /* !!!!!!! --ВАЖНО----!!!!!

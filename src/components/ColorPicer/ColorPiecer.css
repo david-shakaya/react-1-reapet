@@ -1,0 +1,10 @@
+.color-piecer-title {
+  color: black;
+}
+
+.color-piecer-option {
+  margin-right: 5px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
