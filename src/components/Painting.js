@@ -4,11 +4,7 @@ import propTypes from 'prop-types';
 const Painting = props => {
   return (
     <div>
-      <img
-        src={props.url}
-        // alt={props.title}
-        width="300px"
-      />
+      <img src={props.url} alt={props.title} width="300px" />
       <p>{props.title}</p>
       <p>
         Автор: <a href={props.authorURL}> {props.tag}</a>

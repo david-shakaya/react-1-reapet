@@ -2,9 +2,24 @@ import React from 'react';
 import Painting from './Painting';
 import propTypes from 'prop-types';
 
+// ПРимер инлайн стилей
+
+const ulStyle = {
+  //CТИЛИ В ПЕРЕМЕННОй
+  marginRight: '5px',
+  border: '1px black solid',
+};
+
 const PaintingsList = ({ item }) => {
   return (
-    <ul>
+    <ul
+      style={{
+        //CТИЛИ В САМОМ ТЕГЕ
+        display: 'flex',
+        justifyContent: 'center',
+        ...ulStyle,
+      }}
+    >
       {item.map(painting => (
         <li key={painting.id}>
           <Painting
