@@ -2,8 +2,11 @@ import React from 'react';
 import paintings from './paintings.json';
 import PaintingsList from './components/PaintingList/PaintingsList';
 import Logo from './components/Logo';
-import Panel from './components/Panel';
+import Panel from './components/Panel/Panel';
 import ColorPiecer from './components/ColorPicer/ColorPiecer';
+import Notification from './components/Notification/Notification';
+import Container from './components/Container/Container';
+import Header from './components/Header/Header';
 // Рендер c помощю мап.
 
 /* !!!!!!! --ВАЖНО----!!!!!
@@ -20,23 +23,31 @@ const ColorPiecerOption = [
 
 const App = () => {
   return (
-    <div>
-      <ColorPiecer option={ColorPiecerOption} />
-      <Logo text={'Логотип'} />
-      <Panel title={'Title Панели 1'}>
-        <p>Ребенок Панел 1</p>
-        <p>Ребенок Панел 1</p>
-        <a href="#">Ccилка ребенок, читать далее</a>
-      </Panel>
-      <Panel>
-        <p>Ребенок Панел 2</p>
-      </Panel>
-      <Panel title={'Title Панели 3'}>
-        <p>Ребенок Панел 3</p>
-        <a href="#">Ccылка панели 3</a>
-      </Panel>
-      <PaintingsList item={paintings} />
-    </div>
+    <>
+      <Header />
+      <Container>
+        <ColorPiecer option={ColorPiecerOption} />
+        <Logo text={'Логотип'} />
+        <Notification text={'Нотификация с помощью composes в css'} />
+        <Notification
+          text={'Нотификация с помощью composes в css ТИП-error'}
+          type="error"
+        />
+        <Panel title={'Title Панели 1'}>
+          <p>Ребенок Панел 1</p>
+          <p>Ребенок Панел 1</p>
+          <a href="#">Ccилка ребенок, читать далее</a>
+        </Panel>
+        <Panel>
+          <p>Ребенок Панел 2</p>
+        </Panel>
+        <Panel title={'Title Панели 3'}>
+          <p>Ребенок Панел 3</p>
+          <a href="#">Ccылка панели 3</a>
+        </Panel>
+        <PaintingsList item={paintings} />
+      </Container>
+    </>
   );
 };
 

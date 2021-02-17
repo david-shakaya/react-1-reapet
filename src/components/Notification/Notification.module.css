@@ -1,0 +1,22 @@
+.Notification__container {
+  display: block;
+  width: 200px;
+  height: 90px;
+}
+
+.Notification__text {
+  line-height: 1.5;
+  padding: 6px;
+}
+
+.error {
+  composes: Notification__text;
+  background-color: red;
+  color: white;
+}
+
+.success {
+  composes: Notification__text;
+  background-color: green;
+  color: white;
+}
