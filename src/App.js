@@ -1,7 +1,6 @@
 import React from 'react';
 import paintings from './paintings.json';
 import PaintingsList from './components/PaintingList/PaintingsList';
-import Logo from './components/Logo';
 import Panel from './components/Panel/Panel';
 import ColorPiecer from './components/ColorPicer/ColorPiecer';
 import Notification from './components/Notification/Notification';
@@ -27,7 +26,6 @@ const App = () => {
       <Header />
       <Container>
         <ColorPiecer option={ColorPiecerOption} />
-        <Logo text={'Логотип'} />
         <Notification text={'Нотификация с помощью composes в css'} />
         <Notification
           text={'Нотификация с помощью composes в css ТИП-error'}

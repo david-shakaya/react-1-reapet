@@ -1,7 +1,14 @@
 import React from 'react';
-import style from './Header.module.css';
 import propTypes from 'prop-types';
+import style from './Header.module.css';
+import Logo from './Logo/Logo';
 
-const Header = () => <div className={style.Header}></div>;
+const Header = ({ children }) => (
+  <div className={style.Header}>{<Logo text={'Логотип'} />}</div>
+);
+
+Header.propTypes = {
+  children: propTypes.node,
+};
 
 export default Header;
