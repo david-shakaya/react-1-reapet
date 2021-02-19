@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from './components/Counter/Counter';
 
 // Рендер c помощю мап.
 
@@ -9,7 +10,7 @@ import React from 'react';
  */
 
 const App = () => {
-  return <div></div>;
+  return <Counter></Counter>;
 };
 
 export default App;
