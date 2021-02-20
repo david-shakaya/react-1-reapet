@@ -1,21 +1,30 @@
 import React from 'react';
 import style from './Counter.module.css';
+import PropTypes from 'prop-types';
 
 // ДЛЯ того что бы динамически менять дом узлы нужно работать через классы!
 // Имеет необходимый метод рендер, для рендера разметки
 class Counter extends React.Component {
+  // Устанавливает  дефолтное значение есл пропс не передали
+  static defaultProps = {
+    initialValue: 0,
+  };
+
+  // Так пишем пропТайп в классах
+  static propTypes = {
+    initialValue: PropTypes.number,
+  };
   // Сюда можно записывать зачения которые будем показывать и изменяь в дом
   state = {
-    valueCounter: 0,
+    valueCounter: this.props.initialValue,
+    //  this.props.initialValue  это значение которое мы передаем как пропс
   };
 
   //Таким образом меням содержимое state. И все это отображается в дом
   handleIncrement = () => {
-    this.setState(prevState => {
-      return {
-        valueCounter: prevState.valueCounter + 1,
-      };
-    });
+    this.setState(prevState => ({
+      valueCounter: prevState.valueCounter + 1,
+    }));
   };
 
   handleDecrement = () => {
@@ -23,11 +32,9 @@ class Counter extends React.Component {
     // this.setState({ valueCounter: 0 });
 
     //Если нам нужно перезаписать значение основываясь на пред результате используем функц
-    this.setState(prevState => {
-      return {
-        valueCounter: prevState.valueCounter - 1,
-      };
-    });
+    this.setState(prevState => ({
+      valueCounter: prevState.valueCounter - 1,
+    }));
   };
 
   // таким образом можно визвать функцию при клике

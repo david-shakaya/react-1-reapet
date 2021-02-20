@@ -10,7 +10,7 @@ import Counter from './components/Counter/Counter';
  */
 
 const App = () => {
-  return <Counter></Counter>;
+  return <Counter initialValue={10}></Counter>;
 };
 
 export default App;
