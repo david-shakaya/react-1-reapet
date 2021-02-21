@@ -1,6 +1,8 @@
 import React from 'react';
 import Counter from './components/Counter/Counter';
 import Dropdown from './components/Dropdown/Dropdown';
+import colorPickerData from './data/colorPickerData.json';
+import ColorPicker from './components/ColorPicker/ColorPicker';
 
 // Рендер c помощю мап.
 
@@ -15,6 +17,7 @@ const App = () => {
     <>
       <Counter initialValue={10}></Counter>
       <Dropdown />
+      <ColorPicker options={colorPickerData} />
     </>
   );
 };

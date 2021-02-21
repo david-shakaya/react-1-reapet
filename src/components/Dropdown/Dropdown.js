@@ -3,29 +3,30 @@ import style from './Dropdown.module.css';
 
 class Dropdown extends React.Component {
   state = {
-    isVisibleDropdown: false,
+    visibleDropdown: false,
   };
 
-  showDropdown = () => {
-    this.setState({ isVisibleDropdown: true });
-  };
-
-  hideDropdown = () => {
-    this.setState({ isVisibleDropdown: false });
+  togle = () => {
+    this.setState(prevState => ({
+      visibleDropdown: !prevState.visibleDropdown,
+      // !prevState таким образом меняем наобород pyfxtybt! С тру на фолс и наобород
+    }));
   };
 
   render() {
     return (
       <div className={style.Dropdown__wrapper}>
         <div>
-          <button className={style.Dropdown__btn} onClick={this.showDropdown}>
-            Показать
-          </button>
-          <button className={style.Dropdown__btn} onClick={this.hideDropdown}>
-            Скрыть
+          <button
+            type="button"
+            className={style.Dropdown__btn}
+            onClick={this.togle}
+          >
+            {this.state.visibleDropdown ? 'Скрыть' : 'Показать'}
           </button>
         </div>
-        {this.state.isVisibleDropdown && (
+
+        {this.state.visibleDropdown && (
           <div className={style.Dropdown}>Dropdawn</div>
         )}
       </div>
