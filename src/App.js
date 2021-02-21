@@ -1,8 +1,8 @@
 import React from 'react';
-import Counter from './components/Counter/Counter';
-import Dropdown from './components/Dropdown/Dropdown';
+import Counter from './components/Counter/';
+import Dropdown from './components/Dropdown/';
 import colorPickerData from './data/colorPickerData.json';
-import ColorPicker from './components/ColorPicker/ColorPicker';
+import ColorPicker from './components/ColorPicker/';
 
 // Рендер c помощю мап.
 
