@@ -14,7 +14,7 @@ class ColorPicker extends React.Component {
     this.setState({ activeOptionIdx: index });
   };
 
-  qwe = index => {
+  addActiveClasses = index => {
     const optionsClasses = [ColorPicker__option];
     if (index === this.state.activeOptionIdx) {
       optionsClasses.push(ColorPicker__option__active);
@@ -22,17 +22,18 @@ class ColorPicker extends React.Component {
     return optionsClasses.join(' ');
   };
 
-  // handleClick = (){
-  //     this.setState({
-  //         activeOptionIdx:
-  //     })
-  // }
-
   render() {
+    //   this.props.options Это пропс который передается
+    //  [this.state.activeOptionIdx].label   так выбираем активный индекс и выводим Label
+    const activeOptionLabel = this.props.options[this.state.activeOptionIdx]
+      .label;
     return (
       <div className={style.ColorPicker}>
         <h2 className={style.ColorPicker__title}>Color Picker</h2>
-        <p>Выбран цвет:</p>
+        <p>
+          Выбран цвет:
+          <span className={style.color__text__span}> {activeOptionLabel}</span>
+        </p>
         <div>
           {this.props.options.map(({ label, color }, index) => {
             return (
@@ -41,7 +42,7 @@ class ColorPicker extends React.Component {
                 style={{
                   backgroundColor: color,
                 }}
-                className={this.qwe(index)}
+                className={this.addActiveClasses(index)}
                 onClick={() => this.setActiveIdx(index)}
               ></button>
             );
